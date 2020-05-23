@@ -1,12 +1,16 @@
-
 .page {
     color: white;
     margin-top: 2rem;
     margin-left: 4rem;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
 }
 
-
+.logo{
+    width: 80%;
+    text-align: center;
+    margin-left: 6%;
+}
 
 .btn {
     flex: 1 1 auto;
@@ -42,7 +46,7 @@
 }
 .btn-custom-black:hover{
     color: black;
-    background:white;
+    background:rgb(223, 223, 223);
 }
 
 .questionMarkImage{

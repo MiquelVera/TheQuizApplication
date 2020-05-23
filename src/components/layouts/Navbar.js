@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navbar.css';
+import navlogo from '../../square-logo.png';
 
 import { Link } from 'react-router-dom';
 class Navbar extends React.Component{
@@ -17,7 +18,15 @@ class Navbar extends React.Component{
     render(){
         return(
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <Link className="navbar-brand" to="/">TheQuizApplication</Link>
+            <Link className="navbar-brand" to="/">
+                <div className="container">
+                <img className="nav-logo" src={navlogo} alt="logo"/>
+                <div className="logo-name">TheQuizApplication</div>
+
+                </div>
+
+                
+            </Link>
 
             <button className="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
                 <span className="navbar-toggler-icon"></span>
