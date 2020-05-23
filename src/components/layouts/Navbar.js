@@ -2,8 +2,45 @@ import React from 'react';
 import './Navbar.css';
 
 import { Link } from 'react-router-dom';
+class Navbar extends React.Component{
 
-function Navbar(){
+    constructor(props){
+        super(props);
+        if(this.props.state === 'logged'){
+            this.opciones = [{texto: 'Created tests', link: '/created-tests'}, {texto: 'Participated tests', link: '/participated-tests'}, {texto:'Profile', link: '/profile'}];
+        }
+        else{
+            this.opciones = [{texto: 'Login', link: '/login'}];
+            }
+    }
+
+    render(){
+        return(
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <Link className="navbar-brand" to="/">TheQuizApplication</Link>
+
+            <button className="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+                <span className="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarMenu" className="collapse navbar-collapse">
+                <ul className="navbar-nav ml-auto">
+                    {
+                        this.opciones.map((opcion,i) => {
+                            return(
+                            <li className="nav-item">
+                                <Link className="nav-link ml-5" to={opcion.link}>{opcion.texto}</Link>
+                            </li>
+                            );
+                        })
+                    }
+                    
+                </ul>
+            </div>
+        </nav>
+        ); 
+    }
+}
+/*function Navbar(){
     return(
 
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -23,12 +60,10 @@ function Navbar(){
                     <li className="nav-item">
                         <Link className="nav-link ml-5" to="/profile">PROFILE</Link>
                     </li>
-                    
                 </ul>
             </div>
         </nav>
-
     );
-}
+}*/
 
 export default Navbar;
