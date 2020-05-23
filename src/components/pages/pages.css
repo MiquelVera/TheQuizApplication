@@ -33,3 +33,8 @@
 .btn-custom {
     background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 50%, #84fab0 100%);
 }
+
+.questionMarkImage{
+    margin-top: 3rem;
+    width: 10rem;
+}

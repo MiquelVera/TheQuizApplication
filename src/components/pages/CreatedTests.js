@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './pages.css';
+import questionMarkBlue from '../../QuestionMark(blue).png';
 
 class CreatedTests extends Component {
     render() {
@@ -14,6 +15,7 @@ class CreatedTests extends Component {
                     <div className="create col-lg-6 col-md-12">
                         <div className="create-image">
                             <h1>Image</h1>
+                            <img className="questionMarkImage" src={questionMarkBlue} alt="questionMarkImage"/>
                         </div>
                         <br/>
                         <br/>
