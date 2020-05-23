@@ -15,8 +15,10 @@ class CreatedTests extends Component {
                         <div className="create-image">
                             <h1>Image</h1>
                         </div>
+                        <br/>
+                        <br/>
                         <div className="create-button">
-                            <h1>Button</h1>
+                            <button className="btn btn-custom">New</button>
                         </div>
                     </div>
                 </div>

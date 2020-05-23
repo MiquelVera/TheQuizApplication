@@ -30,7 +30,7 @@
 }
 
 .nav-link:hover{
-    background: -webkit-gradient( linear, left top, right top, color-stop(0, #F58529), color-stop(0.25, #FEDA77), color-stop(0.5, #DD2A7B), color-stop(0.75, #8134AF), color-stop(1, #515BD4) );
+    background: linear-gradient(to right, #84fab0 0%, #8fd3f4 50%, #84fab0 100%);
     -webkit-background-clip: text;
     background-clip: none;
     -webkit-text-fill-color: transparent;
