@@ -18,7 +18,7 @@ class CreatedTests extends Component {
                         <br/>
                         <br/>
                         <div className="create-button">
-                            <button className="btn btn-custom">New</button>
+                            <button className="btn btn-custom">+ New test</button>
                         </div>
                     </div>
                 </div>

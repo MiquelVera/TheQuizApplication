@@ -3,6 +3,7 @@
     color: white;
     margin-top: 2rem;
     margin-left: 4rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -14,11 +15,12 @@
     padding-right: 50px;
     text-align: center;
     font-size: 1.5rem;
+    font-weight: bolder;
     transition: 0.5s;
     background-size: 200% auto;
     color: black;
     box-shadow: 0 0 30px #eee;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .btn:hover {
