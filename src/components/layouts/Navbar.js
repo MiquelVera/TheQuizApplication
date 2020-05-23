@@ -7,10 +7,10 @@ class Navbar extends React.Component{
     constructor(props){
         super(props);
         if(this.props.state === 'logged'){
-            this.opciones = [{texto: 'Created tests', link: '/created-tests'}, {texto: 'Participated tests', link: '/participated-tests'}, {texto:'Profile', link: '/profile'}];
+            this.opciones = [{texto: 'CREATED TESTS', link: '/created-tests'}, {texto: 'PARTICIPATED TESTS', link: '/participated-tests'}, {texto:'PROFILE', link: '/profile'}];
         }
         else{
-            this.opciones = [{texto: 'Login', link: '/login'}];
+            this.opciones = [{texto: 'LOGIN', link: '/login'}];
             }
     }
 
