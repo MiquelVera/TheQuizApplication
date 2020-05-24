@@ -10,10 +10,9 @@ class CreatedTests extends Component {
         super();
         this.tests =[{name: 'Test 1', link: '/created-tests'},
                      {name: 'Test 2', link: '/created-tests'},
-                     {name: 'Test 2', link: '/created-tests'},
-                     {name: 'Test 2', link: '/created-tests'},
-                     {name: 'Test 2', link: '/created-tests'},
-                     {name: 'Test 2', link: '/created-tests'},];
+                     {name: 'Test 3', link: '/created-tests'},
+                     {name: 'Test 4', link: '/created-tests'},
+                     {name: 'Test 5', link: '/created-tests'},];
     }
 
     render() {
