@@ -8,20 +8,23 @@ import { Switch, Route } from 'react-router-dom';
 
 import Home from './components/pages/Home';
 import CreatedTests from './components/pages/CreatedTests';
+import TestCreation from './components/pages/TestCreationPage';
 import ParticipatedTests from './components/pages/ParticipatedTests';
 import Profile from './components/pages/Profile';
 import Login from './components/pages/Login';
 import NotFoundPage from './components/pages/NotFoundPage';
 
 
+
 class App extends Component {
   render(){
     return(
       <div>
-        <Navbar state = 'logged'/>
+        <Navbar state = 'no-logged'/>
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route path="/created-tests" component={CreatedTests}/>
+          <Route path="/test-creation" component={TestCreation}/>
           <Route path="/participated-tests" component={ParticipatedTests}/>
           <Route path="/profile" component={Profile}/>
           <Route path="/login" component ={Login}/>

@@ -36,7 +36,7 @@ class CreatedTests extends Component {
 
                     <div className="create col-lg-6 col-md-12">
                         <div className="create-button">
-                            <button className="btn btn-custom-blue">+ New test</button>
+                            <Link to='/test-creation'><button className="btn btn-custom-blue">+ New test</button></Link>
                         </div>
                         <br/>
                         <br/>

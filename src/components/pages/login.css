@@ -82,6 +82,11 @@ input[type=email]:placeholder, input[type=password]:placeholder {
     font-weight: 500!important;
 }
 
-#createAccBut{
-  margin-right: 00px;
+#createAccBut:hover{
+  text-decoration: underline;
+}
+
+.createAccDiv{
+  margin-top: -15px;
+  margin-right: 50px;
 }

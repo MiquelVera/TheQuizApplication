@@ -13,13 +13,13 @@ class Login extends Component {
             <div>
                 <h1 id="log-tittle">The Quiz Application</h1>
             </div>
-            <form>
-                <input type="email" id="login" class="fadeIn second" name="login" placeholder="Mail"/>
-                <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password"/>
+            <form id="formulario_login">
+                <input type="email" id="email" class="fadeIn second" name="email" placeholder="Mail"/>
+                <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password"/>
                 <input type="submit" class="fadeIn fourth" value="Log In"/>
             </form>
             <div className="createAccDiv">
-                <Link className="nav-link ml-5" to="/created-tests">Create an account</Link>
+                <Link className="nav-link ml-5" to="/created-tests" id="createAccBut">Create an account</Link>
             </div>
             </div>
            
