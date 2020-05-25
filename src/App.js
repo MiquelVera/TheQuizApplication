@@ -20,7 +20,7 @@ class App extends Component {
   render(){
     return(
       <div>
-        <Navbar state = 'no-logged'/>
+        <Navbar state = 'logged'/>
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route path="/created-tests" component={CreatedTests}/>
