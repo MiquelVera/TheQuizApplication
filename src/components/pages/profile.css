@@ -1,0 +1,13 @@
+.profile {
+margin : 0;
+margin-top: 5rem;
+}
+
+.info-text {
+    font-size: 40px;
+    transition: 0.025s;
+}
+
+.info-text:hover {
+    font-weight: bold;
+}

@@ -2,17 +2,15 @@ import React, { Component } from 'react';
 import './pages.css';
 import questionMarkBlue from '../../QuestionMark(blue).png';
 
+import items from '../../data/created.json';
+
 import { Link } from 'react-router-dom';
 
 class CreatedTests extends Component {
 
     constructor() {
         super();
-        this.tests =[{name: 'Test 1', link: '/created-tests'},
-                     {name: 'Test 2', link: '/created-tests'},
-                     {name: 'Test 3', link: '/created-tests'},
-                     {name: 'Test 4', link: '/created-tests'},
-                     {name: 'Test 5', link: '/created-tests'},];
+        this.tests = items;
     }
 
     render() {
@@ -26,8 +24,21 @@ class CreatedTests extends Component {
                     <div className="created col-lg-6 col-md-12">
                         {
                         this.tests.map(opcion => {
+                            this.published = false;
+                            this.testName = opcion.name;
+                            this.testClassName = 'btn btn-custom-black';
+
+                            if(opcion.state === 'published'){
+                                this.published = true;
+                            }
+                            
+                            if(!this.published){
+                                this.testName = opcion.name + ' (NOT PUBLISHED)';
+                                this.testClassName = 'btn btn-custom-black not-published';
+                            }
+
                             return(
-                                <Link to={opcion.link}><button className="btn btn-custom-black" >{opcion.name}</button></Link>
+                                <Link to={opcion.link}><button className={this.testClassName} >{this.testName}</button></Link>
                             );
                         })
                         }
@@ -40,6 +51,9 @@ class CreatedTests extends Component {
                         <br/>
                         <br/>
                         <div className="create-image">
+                            <p className="info-text">
+                                Here you can create a new test and manage all your already created tests.
+                            </p>
                             <img className="questionMarkImage" src={questionMarkBlue} alt="questionMarkImage"/>
                         </div>
                     </div>

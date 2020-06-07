@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Test 1",
+        "link": "/created-tests",
+        "state": "published"
+    },
+    {
+        "id": 2,
+        "name": "Test 2",
+        "link": "/created-tests",
+        "state": "not-published"
+    },
+    {
+        "id": 3,
+        "name": "Test 3",
+        "link": "/created-tests",
+        "state": "published"
+    },
+    {
+        "id": 4,
+        "name": "Test 4",
+        "link": "/created-tests",
+        "state": "not-published"
+    }
+]

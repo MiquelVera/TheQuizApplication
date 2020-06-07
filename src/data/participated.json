@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Test 1",
+        "score": "25%",
+        "link": "/participated-tests"
+    },
+    {
+        "id": 2,
+        "name": "Test 2",
+        "score": "72%",
+        "link": "/participated-tests"
+    },
+    {
+        "id": 3,
+        "name": "Test 3",
+        "score": "92%",
+        "link": "/participated-tests"
+    }
+]
