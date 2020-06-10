@@ -6,6 +6,7 @@ import items from '../../data/created.json';
 
 import { Link } from 'react-router-dom';
 
+
 class CreatedTests extends Component {
 
     constructor() {
@@ -38,7 +39,7 @@ class CreatedTests extends Component {
                             }
 
                             return(
-                                <Link to={opcion.link}><button className={this.testClassName} >{this.testName}</button></Link>
+                                <Link to={'test/' + opcion.id}><button className={this.testClassName} >{this.testName}</button></Link>
                             );
                         })
                         }

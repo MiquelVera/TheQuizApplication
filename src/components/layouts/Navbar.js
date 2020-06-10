@@ -36,7 +36,7 @@ class Navbar extends React.Component{
                     {
                         this.opciones.map((opcion,i) => {
                             return(
-                            <li className="nav-item">
+                            <li className="nav-item" key={opcion.texto}>
                                 <Link className="nav-link ml-5" to={opcion.link}>{opcion.texto}</Link>
                             </li>
                             );

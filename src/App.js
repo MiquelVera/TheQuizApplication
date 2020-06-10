@@ -12,6 +12,7 @@ import TestCreation from './components/pages/TestCreationPage';
 import ParticipatedTests from './components/pages/ParticipatedTests';
 import Profile from './components/pages/Profile';
 import Login from './components/pages/Login';
+import Test from './components/pages/Test';
 import NotFoundPage from './components/pages/NotFoundPage';
 
 
@@ -28,6 +29,7 @@ class App extends Component {
           <Route path="/participated-tests" component={ParticipatedTests}/>
           <Route path="/profile" component={Profile}/>
           <Route path="/login" component ={Login}/>
+          <Route path="/test/:id" component={Test}/>
           <Route component={NotFoundPage}/>
         </Switch>
       </div>
