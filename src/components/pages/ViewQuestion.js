@@ -19,13 +19,39 @@ class ViewQuestion extends Component{
         return(
             <div className="quiz">
                 <p className="question">{this.q}</p>
-                <p className="option">{this.o1}</p>
-                <p className="option">{this.o2}</p>
-                <p className="option">{this.o3}</p>
-                <p className="option">{this.o4}</p>
+
+                <form>
+                    <div className="custom-control custom-radio opcion">
+                        <input type="radio" id="radio1" name="answer" value="1"/>
+                        <label for="radio1" className="label">{this.o1}</label>
+                    </div>
+
+                    <div className="custom-control custom-radio opcion">
+                        <input type="radio" id="radio2" name="answer" value="2"/>
+                        <label for="radio2" className="label">{this.o2}</label>  
+                    </div>
+
+                    <div className="custom-control custom-radio opcion">
+                        <input type="radio" id="radio3" name="answer" value="3"/>
+                        <label for="radio3" className="label">{this.o3}</label>  
+                    </div>
+                    
+                    <div className="custom-control custom-radio opcion">
+                        <input type="radio" id="radio4" name="answer" value="4"/>
+                        <label for="radio4" className="label">{this.o4}</label>    
+                    </div>
+                </form>
+
+
                 <p className="answer">{this.answer}</p>
+
+                
+
+
+
+                
+
             </div>
-            
         );
     }
 
