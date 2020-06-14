@@ -82,7 +82,7 @@ class Profile extends Component {
                         <div className="user-profile">
                             <div className="user-details">
                                 <div className="user-avatar">
-                                    <Avatar className="user-avatar-circle" style={{ backgroundColor: getAvatarColor(this.state.user.name)}}>
+                                    <Avatar className="user-avatar-circle" style={{ color: getAvatarColor(this.state.user.name)}}>
                                         {this.state.user.name[0].toUpperCase()}
                                     </Avatar>
                                 </div>
@@ -100,10 +100,10 @@ class Profile extends Component {
                                     tabBarStyle={tabBarStyle}
                                     size="large"
                                     className="profile-tabs">
-                                    <TabPane tab={`${this.state.user.pollCount} Polls`} key="1">
+                                    <TabPane tab={`${this.state.user.pollCount} Created`} key="1">
                                         <PollList username={this.props.match.params.username} type="USER_CREATED_POLLS" />
                                     </TabPane>
-                                    <TabPane tab={`${this.state.user.voteCount} Votes`}  key="2">
+                                    <TabPane tab={`${this.state.user.voteCount} Participated`}  key="2">
                                         <PollList username={this.props.match.params.username} type="USER_VOTED_POLLS" />
                                     </TabPane>
                                 </Tabs>

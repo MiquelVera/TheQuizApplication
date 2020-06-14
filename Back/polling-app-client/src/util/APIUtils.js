@@ -23,6 +23,13 @@ const request = (options) => {
     );
 };
 
+export function getPoll(pollId) {
+    return request({
+        url: API_BASE_URL + "/polls/" + pollId ,
+        method: 'GET'
+    });
+}
+
 export function getAllPolls(page, size) {
     page = page || 0;
     size = size || POLL_LIST_SIZE;

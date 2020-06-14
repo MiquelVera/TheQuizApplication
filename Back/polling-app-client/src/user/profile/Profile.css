@@ -11,13 +11,18 @@
     height: 120px;
     border-radius: 60px;
     line-height: 60px;
+    background-color:  #ececec !important;
+    color: #343a40 !important;
 }
 
 .user-avatar-circle > * {
     line-height: 120px;
-    font-size: 40px;
+    font-size: 50px;
+    font-weight: bold;
     position: relative !important;
     left: 0 !important;
+    background-color:  #ececec !important;
+    color: #343a40 !important
 }
 
 .user-summary {
@@ -46,7 +51,7 @@
 .user-summary .full-name {
     font-size: 30px;
     font-weight: 600;
-    color: rgba(0,0,0,0.85);
+    color: white;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;

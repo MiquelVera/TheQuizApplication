@@ -20,6 +20,8 @@ import LoadingIndicator from '../common/LoadingIndicator';
 import PrivateRoute from '../common/PrivateRoute';
 
 import { Layout, notification } from 'antd';
+import Poll from '../poll/Poll';
+import Home from '../common/Home';
 const { Content } = Layout;
 
 class App extends Component {
@@ -101,7 +103,8 @@ class App extends Component {
           <Content className="app-content">
             <div className="container">
               <Switch>      
-                <Route exact path="/" 
+                <Route exact path="/" component={Home}></Route>
+                <Route exact path="/polls" 
                   render={(props) => <PollList isAuthenticated={this.state.isAuthenticated} 
                       currentUser={this.state.currentUser} handleLogout={this.handleLogout} {...props} />}>
                 </Route>

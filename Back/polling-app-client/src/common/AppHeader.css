@@ -117,9 +117,18 @@
   .nav-icon {
     font-size: 20px;
   }
+  .nav-icon:hover {
+    font-size: 20px;
+  }
 
   .poll-icon {
-    margin-top: -4px;
+    margin-top: -10px;
+    fill: white !important;
+  }
+
+  .plus-icon {
+    margin-top: -8px;
+    width: 1.1rem;
   }
 
 @media (max-width: 768px) {
