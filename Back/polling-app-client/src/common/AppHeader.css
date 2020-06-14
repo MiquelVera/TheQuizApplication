@@ -1,0 +1,138 @@
+*{
+  background-color: #343a40;
+}
+
+.app-title {
+    float: left;
+  }
+  
+  .app-title a {
+    font-size: 30px;
+    margin-left: 0.4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    transition: 0.1s;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .app-title a:hover {
+    text-decoration: none;
+    background: linear-gradient(to right, #84fab0 0%, #8fd3f4 75%, #84fab0 100%);
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px white;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .app-header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    padding: 0;
+  }
+  
+  .app-menu {
+    float: right;
+  }
+  
+  
+  .app-menu > li {
+    padding: 0 20px;
+  }
+  .app-menu > li:hover {
+    padding: 0 20px;
+    background-color: none!important;
+    text-decoration: none !important;
+  }
+
+  .app-menu > li > a {
+    padding: 0 20px;
+    margin: 0 -20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: 0.3s;
+    text-decoration: none !important;
+    color:white !important;
+  }
+  .app-menu > li > a .active {
+    border-bottom: 2px solid linear-gradient(to right, #84fab0 0%, #8fd3f4 50%, #84fab0 100%) !important;
+  }
+  .app-menu > li > a:hover {
+    background-color: none!important;
+    background: linear-gradient(to right, #84fab0 0%, #8fd3f4 50%, #84fab0 100%);
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px white;
+    font-weight: 900;
+    border-bottom: 2px solid linear-gradient(to right, #84fab0 0%, #8fd3f4 50%, #84fab0 100%);
+  }
+  .app-menu > li > a:focus {
+    background: linear-gradient(to right, #84fab0 0%, #8fd3f4 50%, #84fab0 100%);
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px white;
+    font-weight: 900;
+    border-bottom : 0;
+    border-bottom-color : inherit;
+    border-bottom-left-radius : 0;
+    border-bottom-right-radius : 0;
+    border-bottom-style : none;
+    border-bottom-width : medium;
+  }
+
+
+  .app-menu > li > a > i {
+    margin-right: 0 !important;
+  }
+
+  .profile-dropdown-menu {
+    min-width: 180px;
+  }
+
+  .profile-menu .user-full-name-info {
+    font-size: 17px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.85);
+  }
+  
+  .profile-menu .username-info {
+    font-size: 14px;
+    color: rgba(0,0,0,0.65);
+  }
+
+  .dropdown-item {
+    padding: 10px 12px;
+  }
+
+  .dropdown-item a {
+    padding: 10px 12px;
+    margin: -10px -12px;
+  }
+  
+  .nav-icon {
+    font-size: 20px;
+  }
+
+  .poll-icon {
+    margin-top: -4px;
+  }
+
+@media (max-width: 768px) {
+  .app-title a {
+    font-size: 20px;
+  }
+
+  .app-menu > li {
+    padding: 0 15px;
+  }
+
+  .app-menu > li > a {
+    padding: 0 15px;
+    margin: 0 -15px;
+  }
+} 

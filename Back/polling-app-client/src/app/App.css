@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding-top: 0;
+  background-color: #343a40 !important;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+
+.app-content {
+  margin-top: 64px;   
+}
