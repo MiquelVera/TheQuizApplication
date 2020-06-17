@@ -18,11 +18,16 @@ class NewPoll extends Component {
                 text: ''
             }, {
                 text: ''
+            }, {
+                text: ''
+            },{
+                text: ''
             }],
             pollLength: {
                 days: 1,
                 hours: 0
-            }
+            },
+            correctAnswer : 0
         };
         this.addChoice = this.addChoice.bind(this);
         this.removeChoice = this.removeChoice.bind(this);
@@ -32,6 +37,7 @@ class NewPoll extends Component {
         this.handlePollDaysChange = this.handlePollDaysChange.bind(this);
         this.handlePollHoursChange = this.handlePollHoursChange.bind(this);
         this.isFormInvalid = this.isFormInvalid.bind(this);
+        this.handleCorrectAnswerChange = this.handleCorrectAnswerChange.bind(this);
     }
 
     addChoice(event) {
@@ -57,7 +63,8 @@ class NewPoll extends Component {
             choices: this.state.choices.map(choice => {
                 return {text: choice.text} 
             }),
-            pollLength: this.state.pollLength
+            pollLength: this.state.pollLength,
+            correctAnswer: this.state.correctAnswer
         };
 
         createPoll(pollData)
@@ -68,7 +75,7 @@ class NewPoll extends Component {
                 this.props.handleLogout('/login', 'error', 'You have been logged out. Please login create poll.');    
             } else {
                 notification.error({
-                    message: 'The Quiz Application',
+                    message: 'Polling App',
                     description: error.message || 'Sorry! Something went wrong. Please try again!'
                 });              
             }
@@ -137,6 +144,11 @@ class NewPoll extends Component {
         });
     }
 
+    handleCorrectAnswerChange(value) {
+        this.setState({
+            correctAnswer: value
+        })
+    }
 
     handlePollDaysChange(value) {
         const pollLength = Object.assign(this.state.pollLength, {days: value});
@@ -188,11 +200,6 @@ class NewPoll extends Component {
                         </FormItem>
                         {choiceViews}
                         <FormItem className="poll-form-row">
-                            <Button type="dashed" onClick={this.addChoice} disabled={this.state.choices.length === MAX_CHOICES}>
-                                <Icon type="plus" /> Add a choice
-                            </Button>
-                        </FormItem>
-                        <FormItem className="poll-form-row">
                             <Col xs={24} sm={4}>
                                 Poll length: 
                             </Col>
@@ -228,6 +235,28 @@ class NewPoll extends Component {
                             </Col>
                         </FormItem>
                         <FormItem className="poll-form-row">
+                        <Col xs={24} sm={20}>
+                            Correct Answer:  
+                        </Col>
+                        <Col xs={24} sm={10}>    
+                            <span style = {{ marginRight: '18px' }}>
+                                <Select 
+                                    name="correctAnswer"
+                                    defaultValue="0" 
+                                    onChange={this.handleCorrectAnswerChange}
+                                    value={this.state.correctAnswer}
+                                    style={{ width: 60 }} >
+                                    {
+                                        Array.from(Array(4).keys()).map(i => 
+                                            <Option key={i}>{i}</Option>                                        
+                                        )
+                                    }
+                                </Select>
+                            </span>      
+
+                        </Col>            
+                        </FormItem>
+                        <FormItem className="poll-form-row">
                             <Button type="primary" 
                                 htmlType="submit" 
                                 size="large" 
@@ -249,18 +278,8 @@ function PollChoice(props) {
                 placeholder = {'Choice ' + (props.choiceNumber + 1)}
                 size="large"
                 value={props.choice.text} 
-                className={ props.choiceNumber > 1 ? "optional-choice": null}
-                onChange={(event) => props.handleChoiceChange(event, props.choiceNumber)} />
 
-            {
-                props.choiceNumber > 1 ? (
-                <Icon
-                    className="dynamic-delete-button"
-                    type="close"
-                    disabled={props.choiceNumber <= 1}
-                    onClick={() => props.removeChoice(props.choiceNumber)}
-                /> ): null
-            }    
+                onChange={(event) => props.handleChoiceChange(event, props.choiceNumber)} />   
         </FormItem>
     );
 }
