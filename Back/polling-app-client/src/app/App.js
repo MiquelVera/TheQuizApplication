@@ -10,6 +10,7 @@ import { getCurrentUser } from '../util/APIUtils';
 import { ACCESS_TOKEN } from '../constants';
 
 import PollList from '../poll/PollList';
+import PollPage from '../poll/PollPage';
 import NewPoll from '../poll/NewPoll';
 import Login from '../user/login/Login';
 import Signup from '../user/signup/Signup';
@@ -18,6 +19,7 @@ import AppHeader from '../common/AppHeader';
 import NotFound from '../common/NotFound';
 import LoadingIndicator from '../common/LoadingIndicator';
 import PrivateRoute from '../common/PrivateRoute';
+
 
 import { Layout, notification } from 'antd';
 import Poll from '../poll/Poll';
@@ -76,14 +78,14 @@ class App extends Component {
     this.props.history.push(redirectTo);
     
     notification[notificationType]({
-      message: 'Polling App',
+      message: 'The Quiz Application',
       description: description,
     });
   }
 
   handleLogin() {
     notification.success({
-      message: 'Polling App',
+      message: 'The Quiz Application',
       description: "You're successfully logged in.",
     });
     this.loadCurrentUser();
@@ -106,6 +108,10 @@ class App extends Component {
                 <Route exact path="/" component={Home}></Route>
                 <Route exact path="/polls" 
                   render={(props) => <PollList isAuthenticated={this.state.isAuthenticated} 
+                      currentUser={this.state.currentUser} handleLogout={this.handleLogout} {...props} />}>
+                </Route>
+                <Route exact path="/polls/:id" 
+                  render={(props) => <PollPage isAuthenticated={this.state.isAuthenticated} 
                       currentUser={this.state.currentUser} handleLogout={this.handleLogout} {...props} />}>
                 </Route>
                 <Route path="/login" 

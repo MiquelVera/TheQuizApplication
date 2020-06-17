@@ -1,25 +1,8 @@
-## Building a Full Stack Polls app similar to twitter polls with Spring Boot, Spring Security, JWT, React and Ant Design
-
-![App Screenshot](screenshot.png)
-
-### Tutorials
-
-I've written a complete tutorial series for this application on The CalliCoder Blog -
-
-+ [Part 1: Bootstrapping the Project and creating the basic domain models and repositories](https://www.callicoder.com/spring-boot-spring-security-jwt-mysql-react-app-part-1/)
-
-+ [Part 2: Configuring Spring Security along with JWT authentication and Building Rest APIs for Login and SignUp](https://www.callicoder.com/spring-boot-spring-security-jwt-mysql-react-app-part-2/)
-
-+ [Part 3: Building Rest APIs for creating Polls, voting for a choice in a Poll, retrieving user profile etc](https://www.callicoder.com/spring-boot-spring-security-jwt-mysql-react-app-part-3/)
-
-+ [Part 4: Building the front-end using React and Ant Design](https://www.callicoder.com/spring-boot-spring-security-jwt-mysql-react-app-part-4/)
-
 ## Steps to Setup the Spring Boot Back end app (polling-app-server)
 
-1. **Clone the application**
+1. **Change directory to server**
 
 	```bash
-	git clone https://github.com/callicoder/spring-security-react-ant-design-polls-app.git
 	cd polling-app-server
 	```
 
@@ -43,7 +26,7 @@ I've written a complete tutorial series for this application on The CalliCoder B
 	mvn spring-boot:run
 	```
 
-	The server will start on port 8080.
+	The server will start on port 8081.
 
 	You can also package the application in the form of a `jar` file and then run it like so -
 
@@ -53,7 +36,7 @@ I've written a complete tutorial series for this application on The CalliCoder B
 	```
 5. **Default Roles**
 	
-	The spring boot app uses role based authorization powered by spring security. To add the default roles in the database, I have added the following sql queries in `src/main/resources/data.sql` file. Spring boot will automatically execute this script on startup -
+	The spring boot app uses role based authorization powered by spring security. To add the default roles in the database, we have added the following sql queries in `src/main/resources/data.sql` file. Spring boot will automatically execute this script on startup -
 
 	```sql
 	INSERT IGNORE INTO roles(name) VALUES('ROLE_USER');

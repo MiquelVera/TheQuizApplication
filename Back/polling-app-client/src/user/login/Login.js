@@ -14,7 +14,7 @@ class Login extends Component {
             <div className="login-container">
                 <h1 className="page-title">Login</h1>
                 <div className="login-content">
-                    <AntWrappedLoginForm onLogin={this.props.onLogin} />
+                    <AntWrappedLoginForm className="login-form" onLogin={this.props.onLogin} />
                 </div>
             </div>
         );

@@ -69,6 +69,7 @@ class Poll extends Component {
                 />);
             });                
         } else {
+            console.log(this.props.poll.choices);
             this.props.poll.choices.forEach(choice => {
                 pollChoices.push(<Radio className="poll-choice-radio" key={choice.id} value={choice.id}>{choice.text}</Radio>)
             })    
@@ -110,14 +111,8 @@ class Poll extends Component {
                         !(this.props.poll.selectedChoice || this.props.poll.expired) ?
                         (<Button className="vote-button" disabled={!this.props.currentVote} onClick={this.props.handleVoteSubmit}>Vote</Button>) : null 
                     }
-                    <span className="total-votes">{this.props.poll.totalVotes} votes</span>
-                    <span className="separator">•</span>
-                    <span className="time-left">
-                        {
-                            this.props.poll.expired ? "Final results" :
-                            this.getTimeRemaining(this.props.poll)
-                        }
-                    </span>
+                    <span className="total-votes">{this.props.poll.totalVotes} participated</span>
+                    
                 </div>
             </div>
         );
